@@ -1,0 +1,41 @@
+body{
+    background-color: #c4b6b5;
+    box-sizing: border-box;
+
+}
+
+.container-md{
+    background-color: #d1c9c9;
+
+}
+
+button {
+    min-width: 70px;
+    max-width: 70px;
+    background-color: whitesmoke;
+    border: 1px solid white;
+    font-size: large;
+    text-align: center;
+
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.col{
+    margin-bottom: 2px;
+}
+.result_bar_bar{
+    height:70px;
+    border: 1px solid white;
+    background-color: whitesmoke;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: right;
+}
+.result_bar{
+    padding-left: 10px;
+    max-width: 377px;
+    height: 70px;
+}

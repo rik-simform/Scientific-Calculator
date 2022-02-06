@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <form name="calculator">
+
+        <div class="container-md p-5 my-5" style="width: 35%;">
+            <div class="row result_bar">
+                <input type="text" name="result" placeholder="0" style="text-align: right;" id="" disabled>
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="row">
+                    <br>
+
+                    <div class="col">
+                        <button type="button" value="degree" onclick="degree(value)" style="font-weight: bold;">DEG</button>
+                        <button type="button" value="FixedToExponent" onclick="fixed_to_exponent()" style="font-weight: bold;">F-E</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            </br>
+            <div class="col">
+                <!-- Memory Buttons that can save and remove data from the memory -->
+                    <button value="memorycollect" style="transform: scale(1.0);" disabled >MC</button>
+                    <button type="button" value="memoryrecall" onclick="memory_recall()">MR</button>
+                    <button type="button" value="memoryplus" onclick="memory_p()">M+</button>
+                    <button type="button" value="memorysubract" onclick="memory_s()">M-</button>
+                    <button type="button" value="memorysave" onclick="print_ms()">MS</button>
+               
+            </div>
+        </div>
+
+                <!--  trigonometry functions -->
+
+                <div class="dropdown">
+                    
+                    <button type="button" class="btn dropdown-toggle " data-bs-toggle="dropdown">
+                        Trigonometry
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item" onclick="sin()">sin</a></li>
+                        <li><a href="#" class="dropdown-item" onclick="cos()">cos</a></li>
+                        <li><a href="#" class="dropdown-item" onclick="tan()">tan</a></li>
+                        <li><a href="#" class="dropdown-item" onclick="sinh()">sinh</a></li>
+                        <li><a href="#" class="dropdown-item" onclick="cosh()">cosh</a></li>
+                        <li><a href="#" class="dropdown-item" onclick="tanh()">tanh</a></li>
+                    </ul> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                    <!--  Maths functions -->
+
+                    <button type="button" class="btn dropdown-toggle math_func" data-bs-toggle="dropdown">
+                        Functions
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="abs()">abs</a></li>
+                        <li><a class="dropdown-item" onclick="round()">round</a></li>
+                        <li><a class="dropdown-item" onclick="ceil()">ceil</a></li>
+                        <li><a class="dropdown-item" onclick="floor()">floor</a></li>
+
+                    </ul>
+                </div>
+
+        
+
+                <div class="row">
+                    <br>
+                    <div class="col">
+                        <button type="button" value="π" onclick="pi()">π</button>
+                        <button type="button" value="e" onclick="e()">e</button>
+                        <button type="button" value="log" onclick="power_x10()">x<sup>10</sup></button>
+                        <button type="button" value="Clear" onclick="Clear()">C</button>
+                        <button type="button" value="<--" onclick="deleteChar()"><i
+                                class="bi bi-backspace"></i></button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    </br>
+                    <div class="col">
+                        <button type="button" value="square" onclick="square()">x<sup>2</sup></button>
+                        <button type="button" value="1/x" onclick="half(value)"><sup>1</sup>/x</button>
+                        <button type="button" value="|x|" onclick="abs()">|x|</button>
+                        <button type="button" value="exp" onclick="exp()"> exp</button>
+                        <button type="button" value="%" onclick="mod(value)">mod</button>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col">
+                        <button type="button" value="root" onclick="root()"><sup>2</sup>√x</button>
+                        <button type="button" value="(" onclick="openbracket(value)">(</button>
+                        <button type="button" value=")" onclick="closebracket(value)">)</button>
+                        <button type="button" name="nfact" value="factorial" onclick="factorial()">n!</button>
+                        <button type="button" value="*" onclick="number(value)">*</button>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col">
+                        <button type="button" value="x^3" onclick="cubed()"> x<sup>3 </button>
+                        <button type="button" value="7" onclick="number(value)" style="font-weight: bold;">7</button>
+                        <button type="button" value="8" onclick="number(value)" style="font-weight: bold;">8</button>
+                        <button type="button" value="9" onclick="number(value)" style="font-weight: bold;">9</button>
+                        <button type="button" value="/" onclick="number(value)">/</button>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col">
+
+                        <button type="button" value="ten_power" onclick="ten_power_x()">10<sup>x</sup></button>
+                        <button type="button" value="4" onclick="number(value)" style="font-weight: bold;">4</button>
+                        <button type="button" value="5" onclick="number(value)" style="font-weight: bold;">5</button>
+                        <button type="button" value="6" onclick="number(value)" style="font-weight: bold;">6</button>
+                        <button type="button" value="-" onclick="number(value)" style="font-weight: bold;">-</button>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col">
+                        <button type="button" value="log" onclick="log()">log</button>
+                        <button type="button" value="1" onclick="number(value)" style="font-weight: bold;">1</button>
+                        <button type="button" value="2" onclick="number(value)" style="font-weight: bold;">2</button>
+                        <button type="button" value="3" onclick="number(value)" style="font-weight: bold;">3</button>
+                        <button type="button" value="+" onclick="number(value)">+</button>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <br>
+                    <div class="col">
+                        <button type="button" value="ln" onclick="logorithm(value)">ln</button>
+                        <button type="button" name="btnMath" value="pos_neg" onclick="changeSign()"> <sup>+</sup>/<sub>-</sub> </button>
+                        <button type="button" value="0" onclick="number(value)" style="font-weight: bold;">0</button>
+                        <button type="button" value="." onclick="number(value)" style="font-weight: bold;">.</button>
+                        <button type="button" style="background: rgb(184, 178, 178);" value="=" onclick="equal()"
+                            class="equal">=</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+    </form>
+	<script type="text/javascript" src="main.js"> </script>
+</body>
+
+</html>
